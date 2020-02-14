@@ -91,5 +91,5 @@ if __name__ == '__main__':
     }
 
     write_obj = create_data_from_avg(band_avgs)
-    export_csv(write_obj, csv='test_generation.csv')
+    export_csv(write_obj, csv_name='test_generation.csv')
 
