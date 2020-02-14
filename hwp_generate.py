@@ -48,7 +48,7 @@ def export_csv(write_obj, csv_name='custom_hwp_model.csv'):
                 continue
 
             # otherwise write rows
-            autogenhwp.write(str(int(row[0])) + ',' + ','.join([str(i) for i in row[1:]]) + '244.12638,-7.2096205,,,,,,290,45,\n')
+            autogenhwp.write(str(int(row[0])) + ',' + ','.join([str(i) for i in row[1:]]) + ',244.12638,-7.2096205,,,,,,290,45,\n')
 
 def generate_hwp_model(band_avgs):
     write_obj = create_data_from_avg(band_avgs)
