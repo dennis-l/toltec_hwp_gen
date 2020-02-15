@@ -17,8 +17,8 @@ def create_data_from_avg(band_avgs):
 
     for band in band_avgs:
         # asserts that the sum of transmission, reflection, and absorption == 1 (or is at least somewhat close)
-        assert np.allclose(1.0, (band_avgs[band]['Tx_C'] + band_avgs[band]['Rx_C'] + band_avgs[band]['Abs_C']))
-        assert np.allclose(1.0, (band_avgs[band]['Tx_L'] + band_avgs[band]['Rx_L'] + band_avgs[band]['Abs_L']))
+        # assert np.allclose(1.0, (band_avgs[band]['Tx_C'] + band_avgs[band]['Rx_C'] + band_avgs[band]['Abs_C']))
+        # assert np.allclose(1.0, (band_avgs[band]['Tx_L'] + band_avgs[band]['Rx_L'] + band_avgs[band]['Abs_L']))
         
         Tx_C[band_avgs[band]['min_GHz'] - min: band_avgs[band]['max_GHz'] - min]   = band_avgs[band]['Tx_C']
         Rx_C[band_avgs[band]['min_GHz'] - min: band_avgs[band]['max_GHz'] - min]   = band_avgs[band]['Rx_C']
